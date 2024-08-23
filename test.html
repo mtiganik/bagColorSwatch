@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Color switcher</title>
+</head>
+<body>
+  <div class="bag-container">
+    <?xml version="1.0" encoding="UTF-8"?><svg id="bag-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 177.57"><defs><style>
+      .bag-body{fill:#22FFFF;stroke:#231f20;stroke-miterlimit:10;stroke-width:3px;}
+      .c{fill:#60675b;}.d,.e{opacity:.58;}.f{fill:#686868;}.g{fill:#231f20;}.e{fill:#6b6b6b;}</style></defs>
+      <!-- Can -->
+      <g><path class="bag-body" d="M1.5,30v117.57c0,15.74,40.74,28.5,91,28.5s91-12.76,91-28.5V30H1.5Z"/><ellipse class="bag-body" cx="92.5" cy="30" rx="91" ry="28.5"/></g>
+    </svg>    
+    
+    <div class="color-options">
+      <button onclick="changeColor('.bag-body', '#000000')">Black</button>
+      <button onclick="changeColor('.bag-body', '#ff0000')">Red</button>
+      <button onclick="changeColor('.bag-body', '#0000ff')">Blue</button>
+    </div>
+  </div>
+  
+  <script>
+    function changeColor(part, color) {
+      document.querySelectorAll(part).forEach(function(element){
+        element.style.fill = color
+      })
+      
+    }
+  </script>
+  
+</body>
+</html>
